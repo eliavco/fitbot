@@ -1,0 +1,114 @@
+# Node.js dependencies
+node_modules/
+
+# Output directories for TypeScript compiler
+dist/
+build/
+
+# TypeScript compiled JavaScript files and source maps
+*.js
+*.js.map
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables file
+.env
+
+# Editor directories and files
+
+# JetBrains IDEs (e.g., WebStorm, IntelliJ IDEA)
+.idea/
+
+# VSCode
+.vscode/
+.history/
+
+# Vim swap files and backups
+*.swp
+*.swo
+*.swn
+*.swp~
+*~
+
+# MacOS system files
+.DS_Store
+
+# Optional npm cache directory
+.npm/
+
+# Coverage directory used by testing tools
+coverage/
+
+# Build artifacts
+lib/
+
+# Test result reports
+test-results/
+
+# ESLint cache
+.eslintcache
+
+# Prettier cache
+.prettiercache
+
+# TypeScript declaration files
+*.d.ts
+
+# Temporary files
+tmp/
+temp/
+
+# Logs from PM2
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Sentry CLI files
+.sentryclirc
+
+# Yarn Integrity file
+.yarn-integrity
+
+# TernJS port file
+.tern-port
+
+# Parcel-bundler cache (if used)
+.cache/
+
+# Yarn Offline Mirror
+.yarn-offline-mirror/
+
+# Next.js build output (if used)
+.next/
+
+# Nuxt.js build output (if used)
+.nuxt/
+
+# Firebase files (if deploying to Firebase)
+.firebase/
+
+# Exclude Firebase cache
+.firebaserc
+
+# Exclude Firebase debug logs
+firebase-debug.log
+
+# Serverless Framework files (if used)
+.serverless/
+
+# Exclude storybook static files (if used)
+storybook-static/
+
+# Exclude Chromatic cache (if used)
+.chromatic/
+
+# Exclude Cypress cache and screenshots (if used)
+.cypress_cache/
+cypress/screenshots/
+cypress/videos/
