@@ -12,11 +12,11 @@ admin.initializeApp();
 const db = admin.firestore();
 
 // Load environment variables
-const FACEBOOK_PAGE_ACCESS_TOKEN = functions.config().facebook.page_access_token;
-const FACEBOOK_APP_SECRET = functions.config().facebook.app_secret;
-const VERIFY_TOKEN = functions.config().facebook.verify_token;
-const FITBIT_CLIENT_ID = functions.config().fitbit.client_id;
-const FITBIT_CLIENT_SECRET = functions.config().fitbit.client_secret;
+const FACEBOOK_PAGE_ACCESS_TOKEN = ""; //functions.config().facebook.page_access_token;
+const FACEBOOK_APP_SECRET = "";  //functions.config().facebook.app_secret;
+const VERIFY_TOKEN = "";  //functions.config().facebook.verify_token;
+const FITBIT_CLIENT_ID = "";  //functions.config().fitbit.client_id;
+const FITBIT_CLIENT_SECRET = "";  //functions.config().fitbit.client_secret;
 
 const app = express();
 app.use(bodyParser.json({ verify: verifyRequestSignature }));
@@ -56,8 +56,8 @@ app.post('/webhook', async (req, res) => {
 
 // OAuth callback endpoint
 app.get('/fitbit/callback', async (req, res) => {
-	const code = req.query.code;
-	const state = req.query.state;
+	const code: any = req.query.code;
+	const state: any = req.query.state;
 
 	// Exchange authorization code for access token
 	const basicAuth = Buffer.from(`${FITBIT_CLIENT_ID}:${FITBIT_CLIENT_SECRET}`).toString('base64');
@@ -115,7 +115,7 @@ async function handleMessage(sender_psid: string, received_message: any) {
 			});
 		} else {
 			// Fetch activity data
-			const userData = userDoc.data();
+			const userData: any = userDoc.data();
 			const { accessToken, congratulated } = userData;
 
 			if (congratulated) {
